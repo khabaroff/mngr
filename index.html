@@ -1,0 +1,109 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Foundation | Welcome</title>
+
+
+    <script src="static/js/modernizr.js"></script>
+    <script src="static/js/jquery.js"></script>
+
+    <script type="text/javascript" src="static/js/jquery.animateNumber.min.js"></script>
+
+    <script src="static/js/app.js"></script>
+
+
+    <link rel="stylesheet" href="static/css/foundation.min.css"/>
+    <link rel="stylesheet" href="static/css/normalize.css"/>
+
+
+    <link href='http://fonts.googleapis.com/css?family=Roboto+Slab&subset=latin,cyrillic' rel='stylesheet'
+          type='text/css'>
+
+
+    <link rel="stylesheet" href="static/css/app.css"/>
+
+
+</head>
+<body>
+
+<section>
+
+    <div class="row">
+        <div class="large-12 columns"><h1>Сколько Шер?</h1></div>
+    </div>
+
+
+    <div class="row valign-center">
+
+
+        <div class="large-3 columns">&nbsp;</div>
+
+        <div class="large-6 columns">
+
+            <form>
+
+                <div class="row">
+
+
+                    <div class="large-12 columns">
+                        <div class="row collapse">
+                            <div class="small-10 columns">
+                                <input type="text" id="url" value="http://showmethetitle.ru/"
+
+                                       onblur="if (this.value == '') {this.value = 'http://showmethetitle.ru/';}"
+                                       onfocus="if (this.value == 'http://showmethetitle.ru/') {this.value = '';}">
+                            </div>
+
+                            <div class="small-2 columns">
+                                <a href="#" class="button postfix" id="shares">Шеры</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </form>
+
+            <div class="counters">
+                <div class="row">
+                    <div class="small-6 columns">Фейсбук
+                    </div>
+                    <div class="small-3 columns" id="datafb"></div>
+                    <div class="small-3 columns" id="linkfb">1</div>
+                </div>
+
+                <div class="row">
+                    <div class="small-6 columns">ВКонтакте</div>
+                    <div class="small-3 columns" id="datavk"></div>
+                    <div class="small-3 columns" id="linkvk">2</div>
+                </div>
+
+                <div class="row">
+                    <div class="small-6 columns">Твиттер</div>
+                    <div class="small-3 columns" id="datatw"></div>
+                    <div class="small-3 columns" id="linktw">2</div>
+                </div>
+
+
+            </div>
+
+        </div>
+        <!--row centered-->
+
+
+        <div class="large-3 columns">&nbsp;</div>
+
+
+    </div>
+    </div>
+
+
+<div id="fb_count">333</div>
+
+</section>
+
+
+</body>
+</html>

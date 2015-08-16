@@ -1,0 +1,13 @@
+{
+  "name": "habr",
+  "version": "1.0.0",
+  "description": "my",
+  "author": "khabaroff",
+  "license": "ISC",
+  "dependencies": {
+    "browser-sync": "^2.2.3",
+    "gulp": "^3.8.11",
+    "gulp-rigger": "^0.5.8",
+    "gulp-watch": "^4.1.1"
+  }
+}
