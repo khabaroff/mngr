@@ -18,8 +18,7 @@
     <link rel="stylesheet" href="static/css/normalize.css"/>
 
 
-    <link href='http://fonts.googleapis.com/css?family=Roboto+Slab&subset=latin,cyrillic' rel='stylesheet'
-          type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
 
 
     <link rel="stylesheet" href="static/css/app.css"/>
@@ -28,7 +27,37 @@
 </head>
 <body>
 
+
+
+
+
 <section>
+
+    <div class="main1">
+
+
+    <video autoplay loop="" muted="" poster="/static/img/cher.jpg" class="bgvid">
+        <source src="/static/img/cher.webm" type="video/webm">
+        <source src="/static/img/cher.mp4" type="video/mp4">
+    </video>
+
+
+        <button class="md-trigger" data-modal="modal-1">Newspaper</button>
+
+        <div class="md-modal md-effect-1" id="modal-1">
+            <div class="md-content">
+                <h3>Шер не нравится :(</h3>
+                <div>
+                    <p>Ссылочку надо вводить правильно, начиная c http://</p>
+                    <p>То&nbsp;есть в&nbsp;начале аш&nbsp;как стульчик такой, потом две буковки&nbsp;тэ, потом пэ&nbsp;как русская&nbsp;эр. Дальше двоеточие, косая черточка вправо и&nbsp;еще одна косая черточка вправо.</p>
+                    <button class="md-close">Ой, всё</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="md-overlay"></div>
+
+
 
     <div class="row">
         <div class="large-12 columns"><h1>Сколько Шер?</h1></div>
@@ -38,9 +67,10 @@
     <div class="row valign-center">
 
 
-        <div class="large-3 columns">&nbsp;</div>
+        <div class="large-4 columns">&nbsp;</div>
 
-        <div class="large-6 columns">
+        <div class="large-4 columns">
+
 
             <form>
 
@@ -49,14 +79,14 @@
 
                     <div class="large-12 columns">
                         <div class="row collapse">
-                            <div class="small-10 columns">
+                            <div class="small-9 columns">
                                 <input type="text" id="url" value="http://showmethetitle.ru/"
 
                                        onblur="if (this.value == '') {this.value = 'http://showmethetitle.ru/';}"
                                        onfocus="if (this.value == 'http://showmethetitle.ru/') {this.value = '';}">
                             </div>
 
-                            <div class="small-2 columns">
+                            <div class="small-3 columns">
                                 <a href="#" class="button postfix" id="shares">Шеры</a>
                             </div>
                         </div>
@@ -66,24 +96,38 @@
 
             </form>
 
+
+
+
+
             <div class="counters">
                 <div class="row">
-                    <div class="small-6 columns">Фейсбук
-                    </div>
+                    <div class="small-6 columns">Фейсбук</div>
                     <div class="small-3 columns" id="datafb"></div>
-                    <div class="small-3 columns" id="linkfb">1</div>
+                    <div class="small-3 columns"><a id="linkfb" target="_blank" href="">посты &rarr;</a></div>
                 </div>
 
                 <div class="row">
                     <div class="small-6 columns">ВКонтакте</div>
                     <div class="small-3 columns" id="datavk"></div>
-                    <div class="small-3 columns" id="linkvk">2</div>
+                    <div class="small-3 columns"><a id="linkvk" target="_blank" href="">посты &rarr;</a></div>
                 </div>
 
                 <div class="row">
                     <div class="small-6 columns">Твиттер</div>
                     <div class="small-3 columns" id="datatw"></div>
-                    <div class="small-3 columns" id="linktw">2</div>
+                    <div class="small-3 columns"><a id="linktw" target="_blank" href="">посты &rarr;</a></div>
+                </div>
+
+                <div class="row">
+                    <div class="small-12 columns"><hr></div>
+                </div>
+
+
+                <div class="row">
+                    <div class="small-6 columns">Всего</div>
+                    <div class="small-3 columns" id="dataall"></div>
+                    <div class="small-3 columns"></div>
                 </div>
 
 
@@ -93,16 +137,21 @@
         <!--row centered-->
 
 
-        <div class="large-3 columns">&nbsp;</div>
+        <div class="large-4 columns">&nbsp;</div>
 
 
     </div>
     </div>
 
 
-<div id="fb_count">333</div>
+
+</div>
 
 </section>
+
+
+<script src="/static/js/classie.js"></script>
+<script src="/static/js/modalEffects.js"></script>
 
 
 </body>
