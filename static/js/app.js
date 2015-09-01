@@ -7,7 +7,7 @@
 
          var mainLink = $("#url").val();
 
-         if  (mainLink.indexOf("://")) {
+         if (mainLink.indexOf("://") == -1) {
 
                  $(".md-trigger" ).trigger( "click" );
          }
