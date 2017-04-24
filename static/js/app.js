@@ -1,7 +1,3 @@
-
-
-
-
  $(function () {
      $("#shares").click(function () {
 
@@ -59,11 +55,11 @@
 
                  VK.Share.push(page_url, resp.vk)
 
-                 $.getJSON('http://graph.facebook.com/' + encodeURI(page_url), function (response) {
-                     resp.fb.resolve(response && response.shares || 0)
+                 $.getJSON('https://graph.facebook.com/?access_token=TOKEN&id=' + encodeURI(page_url), function (response) {
+                     resp.fb.resolve(response && response.share.share_count || 0)
                  });
 
-                 $.getJSON('http://urls.api.twitter.com/1/urls/count.json?url=' + encodeURI(page_url) + '&callback=?', function (response) {
+                 $.getJSON('http://opensharecount.com/count.json?url=' + encodeURI(page_url), function (response) {
                      resp.twitter.resolve(response && response.count || 0)
                  });
 
@@ -73,6 +69,7 @@
 
 
              var resp = numbers(mainLink)
+             console.log(resp)
 
              $.when(resp.vk, resp.fb, resp.twitter).done(function (vkCount, fbCount, twCount) {
 
