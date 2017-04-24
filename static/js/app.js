@@ -55,7 +55,7 @@
 
                  VK.Share.push(page_url, resp.vk)
 
-                 $.getJSON('https://graph.facebook.com/?access_token=TOKEN&id=' + encodeURI(page_url), function (response) {
+                 $.getJSON('https://graph.facebook.com/?access_token=171397342909894|trYhYsG3AqBzoxOLmdIMa3xTmTo&id=' + encodeURI(page_url), function (response) {
                      resp.fb.resolve(response && response.share.share_count || 0)
                  });
 
