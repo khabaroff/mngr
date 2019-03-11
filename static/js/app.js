@@ -35,7 +35,7 @@
 
                          VK.Share.count = VK.Share._count.bind(this, job.defer)
 
-                         $.getScript('http://vkontakte.ru/share.php?act=count&index=1&url=' + encodeURI(job.url), function () {})
+                         $.getScript('https://vk.com/share.php?act=count&index=1&url=' + encodeURI(job.url), function () {})
                      },
                      _count: function (defer, i, count) {
                          defer && defer.resolve && defer.resolve(count)
@@ -59,7 +59,7 @@
                      resp.fb.resolve(response && response.share.share_count || 0)
                  });
 
-                 $.getJSON('http://opensharecount.com/count.json?url=' + encodeURI(page_url), function (response) {
+                 $.getJSON('https://opensharecount.com/count.json?url=' + encodeURI(page_url), function (response) {
                      resp.twitter.resolve(response && response.count || 0)
                  });
 
